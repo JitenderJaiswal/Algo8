@@ -14,8 +14,7 @@ const development = {
   
   db: "development",
   
-  jwt_secret: "Task3",
-  
+  jwt_secret: "Task3", 
 };
 
 // poweshell $env:ENVIRONMENT="production"
@@ -36,8 +35,7 @@ const production = {
   
   db: process.env.DB,
   
-  jwt_secret: process.env.JWT_SECRET,
-  
+  jwt_secret: process.env.JWT_SECRET,  
 };
 
 module.exports =eval(process.env.ENVIRONMENT) == undefined ? development : eval(process.env.ENVIRONMENT);
@@ -48,13 +46,11 @@ module.exports =eval(process.env.ENVIRONMENT) == undefined ? development : eval(
 -------------------------------------------------------------------------------------------
 var error = function(){ 
 
-    console.log("ERROR"); 
-    
+    console.log("ERROR");    
 }   
 var success = function(){ 
 
-    console.log("SUCCESS"); 
-    
+    console.log("SUCCESS");    
 }     
 var caller = function(status) { 
 
@@ -62,24 +58,21 @@ var caller = function(status) {
     
         if(status === 'Algo') { 
         
-          resolve(); 
-          
+          resolve();     
         } 
         
         else {
         
-            reject(); 
-            
-        } 
-        
+            reject();    
+        }   
     }); 
-    
 }; 
 caller('Algo').then(success).catch(error); // Throw success 
 
 caller('Welcome').then(success).catch(error); // Throw error 
 
 #Task 3A 
+
 RUN: localhost:8000
 
 #REGISTER API : Register User
@@ -102,8 +95,7 @@ RESPONSE:
         "token": 
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmM4Y2M4ZGU4MzAwOTFiNzhkMmM0OTQiLCJlbWFpbCI6ImppdGVuZGVyamFpc3dhbEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCRqZmhTYm0yUC9OSVpzZj
         VnMkRlWWh1S0NaM1g3U1NXUW9nSW9vdkpudEticmFaTXE3d1lnUyIsIm5hbWUiOiJKaXRlbmRlckphaXN3YWwiLCJjcmVhdGVkQXQiOiIyMDIwLTEyLTAzVDExOjMxOjI1LjI1NloiLCJ1cGRhdGVkQXQiOiIyMDIwLTEyLTAzVDExOj
-        
- MxOjI1LjI1NloiLCJfX3YiOjAsImlhdCI6MTYwNzAwNzYzMSwiZXhwIjoxNjA3MDA4NjMxfQ.grzZKB4alY8P4Z3YMHoqUZKQYLiBq1QU-uUKBP6Lfik",
+        MxOjI1LjI1NloiLCJfX3YiOjAsImlhdCI6MTYwNzAwNzYzMSwiZXhwIjoxNjA3MDA4NjMxfQ.grzZKB4alY8P4Z3YMHoqUZKQYLiBq1QU-uUKBP6Lfik",
         
         "user": {
            
