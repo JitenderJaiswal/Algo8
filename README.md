@@ -5,11 +5,17 @@
 config/environment.js
 
 const development = {
+
   name: "development",
+  
   asset_path: "/assets",
+  
   session_cookie_key: "Algo8",
+  
   db: "development",
+  
   jwt_secret: "Task3",
+  
 };
 
 // poweshell $env:ENVIRONMENT="production"
