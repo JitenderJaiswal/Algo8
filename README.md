@@ -5,7 +5,6 @@
 config/environment.js
 
 const development = {
-
   name: "development",
   
   asset_path: "/assets",
@@ -26,7 +25,6 @@ const development = {
 //npm run prod_start
 
 const production = {
-
   name: "production",
   
   asset_path: process.env.ASSET_PATH,
@@ -45,13 +43,13 @@ module.exports =eval(process.env.ENVIRONMENT) == undefined ? development : eval(
 #Task 2 : Convert any callback into a promise with example code of callback and promise.
 -------------------------------------------------------------------------------------------
 var error = function(){ 
-
     console.log("ERROR");    
-}   
-var success = function(){ 
+}  
 
+var success = function(){ 
     console.log("SUCCESS");    
-}     
+}   
+
 var caller = function(status) { 
 
     return new Promise(function(resolve, reject) { 
@@ -59,8 +57,7 @@ var caller = function(status) {
         if(status === 'Algo') { 
         
           resolve();     
-        } 
-        
+        }    
         else {
         
             reject();    
@@ -84,7 +81,6 @@ http://localhost:8000/api/users/register
 http://localhost:8000/api/users/login
 
 RESPONSE:
-
 {
     "message": "Sign in successful, here is your token, please keep it safe!",
     
@@ -113,8 +109,7 @@ RESPONSE:
             
             "__v": 0
         }
-    }
-}
+    }}
 
 #PROFILE API : Profile of User
 http://localhost:8000/api/users/profile
@@ -138,7 +133,6 @@ RESPONSE :
     "updatedAt": "2020-12-03T11:31:25.256Z",
     
     "__v": 0
-    }
-}
+    }}
 
 
